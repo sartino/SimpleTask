@@ -8,9 +8,24 @@
 
 <body>
   <button onclick="alertMe()" id="button">Press me!</button>
+  <br><br>
+  <br>Enter some text for alert:
+  <input type="text" id="inputText" />
+  <br><br>
+  <input type="button" id="button2" value="Click Me to display the text above" onclick="showAlert('inputText')" />
+  <br><br><br>
+  <div id="hoverBlue" onmouseover="changeBackground(this.id, '#2CA2C9');" onmouseout="changeBackground(this.id, '#FFFFFF');">
+    Hover over this div.<br>It will change color.
+  </div>
+<p id="redText" onclick="textChange()">Click on this text and it will turn red.</p>
+<p id="randomText" onclick="textRandom()">Click on this text and it will turn a random color.</p>
+
+<div id="emptyDiv" onclick="clickMakeName()">Press Me</div>
 
 
 
 </body>
 
 </html>
+
+<!--Add a span that says your name in it to an empty div. Use DOM, jQuery, and Angular.-->
