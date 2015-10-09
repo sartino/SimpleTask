@@ -26,7 +26,54 @@ function textRandom() {
 
 function clickMakeName() {
     var h = document.createElement("span");
-    var t = document.createTextNode("Steve Sartino");
+    var t = document.createTextNode(" Steve Sartino");
     h.appendChild(t);
     document.getElementById("emptyDiv").appendChild(h);
 }
+
+var arr = [['Steve', 'Mike', ' James', ' Gene', ' Ralph', 'Daniel']];
+function fireArray(arr) {
+    var z = document.getElementById("arrayul");
+    for (var i = 0; i < arr.length; i++) {
+        var para = document.createElement('li');
+        para.appendChild(document.createTextNode(arr[i]));
+        z.appendChild(para);
+    }
+    return para
+}
+document.getElementById('arrayul').appendChild(fireArray(arr[0]));
+
+
+// fireArray();
+
+// var myObject = {
+    
+//     name: name,
+//     getName: function () {
+        
+//         var sayHello = function () {
+//             return 'Hello ' + this.name;
+//         };
+        
+//         return sayHello();
+//     }
+    
+// }
+
+// function test() {
+    
+//     this.t = 'f';
+//     this.b = '2';
+    
+//     function doStuff() {
+        
+//         var doMore = function() {
+//             this;
+//             var doEvenMore = function() {
+//                 this.t;
+//             }.bind(this);
+            
+//         }.bind(this);
+//     }
+    
+// }
