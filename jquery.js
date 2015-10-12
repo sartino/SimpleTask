@@ -21,24 +21,27 @@ $(document).ready(function () {
 		$(this).css('color', 'red');
 	});
 
+	var hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' +
+		(Math.floor(Math.random() * 256)) + ',' +
+		(Math.floor(Math.random() * 256)) + ')';
 	$('#randomText').click(function () {
-		$(this).animate({
-			'color': 'rgb(' + (Math.floor(Math.random() * 256)) + ',' +
-			(Math.floor(Math.random() * 256)) + ',' +
-			(Math.floor(Math.random() * 256)) + ')'
-		}, 500);
+		$(this).css("color", hue);
 	});
 
-// 	function textRandom() {
-//     var letters = '0123456789ABCDEF'.split('');
-//     var color = '#';
-//     for (var i = 0; i < 6; i++) {
-//         color += letters[Math.floor(Math.random() * 16)];
-//         document.getElementById("randomText").style.color = color;
-//     }
-// }
+	var letters = '0123456789ABCDEF'.split('');
+	var color = '#';
+	for (var i = 0; i < 6; i++) {
+		color += letters[Math.floor(Math.random() * 16)];
+		$("#randomText2").click(function () {
+			$(this).css("color", color);
+		});
+	};
 
+	$('#emptyDiv').click(function () {
+		$(this).append(' Steve Sartino');
+	});
 
+	var arr = ['Steve', ' Mike', ' James', ' Gene', ' Ralph', ' Daniel'];
+	$('#arrayul').append(arr);
 
 });
-
