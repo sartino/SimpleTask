@@ -10,25 +10,36 @@
 <body ng-controller="Ctrl">
 	<h1>angularJS</h1>
 	<button ng-click="pressMe(greeting)" id="button">Press me!</button>
-	<br><br><br>
-	<div >
+	<br>
+	<br>
+	<br>
+	<div>
 		Enter some text for alert:
-		<input type="text" ng-model="greeting2" id="inputgreen"/>
+		<input type="text" ng-model="greeting2" id="inputgreen" />
 		<br>
 		<br>
-		<button ng-click="doGreeting(greeting2)" id="button2">Click Me to display the text above</button/>
+		<button ng-click="doGreeting(greeting2)" id="button2">Click Me to display the text above
+			</button/>
 	</div>
-	<br><br><br>
+	<br>
+	<br>
+	<br>
 	<div ng-class="{blue: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false" id="hoverBlue">
 		Hover over this div.
 		<br>It will change color.
 	</div>
 	<p ng-style="myStyle" ng-click="myStyle={color:'red'}" id="redText">Click on this text and it will turn red.</p>
-	<p ng-style="myStyleRandom" ng-click="myStyleRandom" id="randomText">Click on this text and it will turn a random color.</p>
 
-	<div id="emptyDiv">Empty Div</div>
-	<br>
-	<ul id="arrayul"></ul>
+	<p ng-style="{'color': myStyleRandom }" ng-click="ngRandom()" id="randomText">Click on this text and it will turn a random color.</p>
+
+	<div ng-app="" ng-init="Name='Steve Sartino'">
+		<p><span ng-bind="Name"></span></p>
+		<br>
+		<ul>
+			<li ng-repeat="person in persons">
+				{{ person }}
+			</li>
+		</ul>
 </body>
 
 </html>
